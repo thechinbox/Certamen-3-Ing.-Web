@@ -7,7 +7,7 @@
                         <label class="left">Título</label>
                     </div>
                     <div class="col-md-8 col-12">
-                        <input placeholder="Titulo Previo: {{titulo}}" class="form-control form-control-lg" type="text" formControlName="titulo" required >
+                        <input [(ngModel)]='titulo' class="form-control form-control-lg" type="text" formControlName="titulo" required >
                         <div *ngIf="formulario.controls['titulo'].invalid && (formulario.controls['titulo'].dirty || formulario.controls['titulo'].touched)" class="alert alert-danger">
                             <div *ngIf="formulario.controls['titulo'].hasError('required') ">
                                 <p>Debe ingresar algun nombre para la tarea.</p>
