@@ -38,7 +38,8 @@ export class HomeComponent implements OnInit {
   
   borrar(tarea:Tarea){
     removeTarea(tarea);
-    this.router.navigate(['create']);
+    this.router.navigateByUrl('/create', {skipLocationChange: true})
+      .then(() => this.router.navigate(['']));
   }
 
 
