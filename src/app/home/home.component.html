@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 col-12">
+            <div class="row">
+                <div class="col-10 left background-green tarea border border-dark mb-3 p-3" *ngFor="let item of tareasT"> {{item.titulo}}</div>
+            </div>
+        </div>
+        <div class="col-lg-4  col-12 ">
+            <div class="row">
+                <div class="col-10 left background-yellow tarea border border-dark mb-3 p-3" *ngFor="let item of tareasP"> {{item.titulo}}</div>
+            </div>
+        </div> 
+        <div class="col-lg-4 col-12 ">
+            <div class="row"> 
+                <div class="col-10 flex-column tarea background-red  border border-dark mb-3 p-3" *ngFor="let item of tareasI"> 
+                    <a [routerLink]="['update',item.id]" class="left ">{{item.titulo}}</a> 
+                    <button type="button" (click)="borrar(item)"><span class="material-icons" id="x"> close</span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-4 ">
+            <button [routerLink]="'create'"><span class="material-icons" id="add">add_circle_outline</span></button>
+            <span id="texto">Adicionar</span>
+        </div>
+
+    </div>
+</div>

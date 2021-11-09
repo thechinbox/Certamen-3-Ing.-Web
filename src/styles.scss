@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.yellow{
+    color: rgb(211, 211, 12);
+}
+.background-yellow{
+    background-color: rgb(211, 211, 12);
+}
+.red{
+    color: rgb(185, 8, 8);
+}
+.background-red{
+    background-color: rgb(185, 8, 8);
+}
+.green{
+    color: rgb(8, 138, 8);
+}
+.background-green{
+    background-color: rgb(8, 138, 8);
+}
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.left{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+.right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}

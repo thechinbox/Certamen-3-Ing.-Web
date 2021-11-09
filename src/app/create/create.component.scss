@@ -1,0 +1,26 @@
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px;  
+}
+.right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin: 15px;
+}
+.left{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 15px;
+}
+button{
+    border-radius: 10px;
+    font-size: x-large;
+}
+label{
+    font-size: xx-large;
+}

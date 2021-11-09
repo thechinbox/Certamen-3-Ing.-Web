@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <form [formGroup]="formulario" novalidate>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <label class="left">Título</label>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <input class="form-control form-control-lg" type="text" formControlName="titulo" required >
+                        <div *ngIf="formulario.controls['titulo'].invalid && (formulario.controls['titulo'].dirty || formulario.controls['titulo'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['titulo'].hasError('required') ">
+                                <p>Debe ingresar algun nombre para la tarea.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+            <div class="col-12 mt-3">
+                <div class="row">
+                    <div class="col-12">
+                        <label class="left"> Estado </label>
+                    </div>
+                    <div class="col-md-4 col-8">
+                        <select class="custom-select custom-select-lg" formControlName="estado">
+                            <option value="{{item.id}}" *ngFor="let item of estados"> {{item.estado}} </option>
+                        </select>
+                        <div *ngIf="formulario.controls['estado'].invalid && (formulario.controls['estado'].dirty || formulario.controls['estado'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['estado'].hasError('required') ">
+                                Seleccione alguna de las opciones.
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-8 mt-5 right">
+                <div class="row">
+                    <div class="col-4 mx-4">
+                        <button type="reset">Cancelar</button>
+                    </div>
+                    <div class="col-4">
+                        <button [routerLink]="''" type="button" (click)="enviar()" [disabled]="formulario.invalid">Crear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
