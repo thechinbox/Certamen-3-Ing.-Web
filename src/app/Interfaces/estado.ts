@@ -4,12 +4,11 @@ export interface Estado {
     id:number;
     estado:string;
     color:string;
-    editable:boolean;
 }
 export let estados = [
-    {id:0, estado:"Iniciada", color:"red", editable:true},
-    {id:1, estado:"En Proceso", color:"yellow", editable:false},
-    {id:2, estado:"Terminada", color:"green", editable:false}
+    {id:0, estado:"Iniciada", color:"red"},
+    {id:1, estado:"En Proceso", color:"yellow"},
+    {id:2, estado:"Terminada", color:"green"}
 ];
 
 export function getEstados(){

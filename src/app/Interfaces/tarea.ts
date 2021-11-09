@@ -1,4 +1,5 @@
 import { TargetMessage } from "@angular/localize/src/utils";
+import { empty } from "rxjs";
 import { textChangeRangeNewSpan } from "typescript";
 import { Estado } from "./estado";
 
@@ -27,16 +28,19 @@ export function addTarea(tarea:Tarea){
     }
     tareas.push(tarea);
 }
-export function removeTarea(tarea:Tarea){    
+export function removeTarea(tarea:Tarea){ 
+    console.log(tareas);
+    console.log(tarea.id)
+       
     for (let index = 0; index < tareas.length && tareas.length>0; index++) {
-        if ((tareas[index]).id == tarea.id){
+        if (tareas[index] != null && tareas[index].id == tarea.id ){
             delete tareas[index];
         }
     }
 }
 export function updateTarea(tarea:Tarea){
     for (let index = 0; index < tareas.length && tareas.length>0; index++) {
-        if ((tareas[index]).id == tarea.id){
+        if (tareas[index] != null && tareas[index].id == tarea.id){
             tareas[index]= tarea;
         }
     }

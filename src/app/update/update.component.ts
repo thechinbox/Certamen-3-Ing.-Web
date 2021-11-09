@@ -29,7 +29,6 @@ export class UpdateComponent implements OnInit {
     for (let index = 0; index < tareas.length; index++) {
       if(tareas[index].id == this.id){
         this.titulo = tareas[index].titulo
-        this.estado = tareas[index].estado
       }      
     }
   }

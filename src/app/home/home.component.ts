@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tarea, getTareas, removeTarea } from '../Interfaces/tarea';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -33,14 +33,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
   
   borrar(tarea:Tarea){
     removeTarea(tarea);
-    let currentUrl = this.router.url;
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.router.onSameUrlNavigation = 'reload';
-    this.router.navigate([currentUrl]);
+    this.router.navigate(['create']);
   }
 
 
